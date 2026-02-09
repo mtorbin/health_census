@@ -1,0 +1,15 @@
+The "failed to fetch" error when accessing a local JSON file is typically caused by browser security restrictions, specifically the
+CORS (Cross-Origin Resource Sharing) policy, which blocks requests using the file:// protocol. Modern browsers prevent a webpage from directly accessing local files for security reasons. 
+To resolve this, you need to serve your files from a local web server (using http:// or https:// protocols) rather than opening the HTML file directly from your file system. 
+
+Solutions
+
+Use a local web server (Recommended): This is the most common and robust solution for development. It mimics a live environment and bypasses the browser's file:// restrictions.
+
+        VS Code Live Server: If you're using VS Code, install the "Live Server" extension. Once installed, open your project folder and click the "Go Live" button in the bottom-right status bar to launch your project on a local development server (e.g., http://127.0.0.1:5500).
+        
+        Node.js: You can install a simple HTTP server using npm install -g http-server, change to your working directory, and start the server by running http-server -c-1.
+
+
+
+Python: If you have Python installed, navigate to your project directory in the terminal and run python -m http.server (Python 3) or python -m SimpleHTTPServer (Python 2). You can then access your files at http://localhost:8000.

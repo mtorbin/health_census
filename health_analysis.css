@@ -34,10 +34,17 @@ nav a {
 /* Basic CSS for the form elements */
 body {
   font-family: Arial, sans-serif;
+  text-align: center;
   /* margin: 20px; */
 }
 
-h1 {
+nav h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.analysisForm h1 {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -47,7 +54,7 @@ div {
 
 label {
   display: inline-block;
-  width: 100px;
+  width: 80px;
 }
 
 input[type="text"],
@@ -75,6 +82,7 @@ h2 {
 }
 
 #report,#result {
+  margin: 0 auto;
   padding: 10px;
   max-width: 400px;
   word-wrap: break-word;

@@ -28,7 +28,7 @@ function searchCondition() {
   const resultDiv = document.getElementById('result');
   resultDiv.innerHTML = '';
 
-  fetch('health_analysis.json')
+  fetch('health_analysis.json')                   // see error notes file
     .then(response => response.json())
     .then(data => {
       const condition = data.conditions.find(item => item.name.toLowerCase() === input);
@@ -53,6 +53,7 @@ function searchCondition() {
       resultDiv.innerHTML = 'An error occurred while fetching data.';
     });
 }
+
 btnSearch.addEventListener('click', searchCondition);
 
 function generateReport() {
